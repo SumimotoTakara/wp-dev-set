@@ -40,7 +40,7 @@ gulp.task("sass", function () {
       //sourcemap 実行 distの直前
       .pipe(sourcemaps.write("./"))
       // 保存先 直下に保存
-      .pipe(gulp.dest("./dist/css"))
+      .pipe(gulp.dest("./assets/css"))
   );
 });
 gulp.task("pug", function () {
@@ -58,7 +58,7 @@ gulp.task("pug", function () {
         extname: ".php",
       })
     )
-    .pipe(gulp.dest("./dist"));
+    .pipe(gulp.dest("./"));
 });
 gulp.task("babel", function () {
   return gulp
@@ -68,7 +68,7 @@ gulp.task("babel", function () {
         presets: ["@babel/env"],
       })
     )
-    .pipe(gulp.dest("./dist/js"));
+    .pipe(gulp.dest("./assets/js"));
 });
 
 //====================
